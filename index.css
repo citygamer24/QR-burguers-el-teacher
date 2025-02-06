@@ -1,0 +1,163 @@
+:root {
+    --background-color: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #ffd700;
+    --accent-color: #ffd700;
+    --section-bg: rgba(0, 0, 0, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+    background-color: var(--section-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.header-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.icon {
+    font-size: 2.5rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.header-line {
+    width: 100px;
+    height: 2px;
+    background: var(--text-secondary);
+    margin: 1rem auto 0;
+}
+
+/* Menu Section Styles */
+.menu-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.menu-section {
+    background-color: var(--section-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.menu-section:hover {
+    transform: scale(1.02);
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-name {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.item-description {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    opacity: 0.9;
+}
+
+.item-price {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .menu-section {
+        padding: 1.5rem;
+    }
+
+    .item-name {
+        font-size: 1.1rem;
+    }
+
+    .item-price {
+        font-size: 1.1rem;
+    }
+}
